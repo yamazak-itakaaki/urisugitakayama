@@ -78,7 +78,7 @@ WSGI_APPLICATION = 'testPj.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'postgres',
+        'ENGINE': 'django.db.backends.postgres',
         'NAME': 'hostgres' / 'db.postgresql',
         'USER':'postgres',
         'PASSWORD':'70013',
