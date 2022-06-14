@@ -1,8 +1,6 @@
 from django.shortcuts import render
 from .models import Hinatazaka46
-
 from django.shortcuts import redirect
-
 from django.shortcuts import render, get_object_or_404
 
 # Create your views here.
