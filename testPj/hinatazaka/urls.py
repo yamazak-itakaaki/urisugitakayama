@@ -1,6 +1,7 @@
 from django.urls import path
 from  .views import hinatazakaListView
+from .views import hinatazakaProfileView
 urlpatterns = [
-    path("",hinatazakaProfileView),
-    path("profile/<int:number>/",hinatazakaProfileView,name="hinatazaka-profile"),
+    path("",hinatazakaListView),
+    path("profile/<int:id>/",hinatazakaProfileView,name="hinatazaka-profile"),
 ]
