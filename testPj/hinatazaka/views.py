@@ -1,6 +1,8 @@
 from django.shortcuts import render
 from .models import Hinatazaka46
+from django.shortcuts import redirect
 from django.shortcuts import render, get_object_or_404
+
 # Create your views here.
 def hinatazakaListView(request):
     template_name = "hinatazaka-list.html"
@@ -22,20 +24,18 @@ def hinatazakaCreateView(request):
     if request.POST:
         miyozi = request.POST["miyozi"]
         name = request.POST["name"]
-        brithday = request.POST["brithday"]
+        birthday = request.POST["birthday"]
         city = request.POST["city"]
+        obj = Hinatazaka46(miyozi=miyozi,name=name,birthday=birthday,city=city)
+        obj.save()
+        return redirect('hinatazaka-list')
     
     return render(request, template_name)
 
-def nippoDeleteView(request, pk):
-    template_name = "hinatazaka-delete.html"
-    obj = get_object_or_404(Hinatazaka46, pk=pk)
-    ctx = {"object": obj}
-    return render(request, template_name, ctx)
 
-def nippoDeleteView(request, pk):
+def hinatazakaDeleteView(request, id):
     template_name = "hinatazaka-delete.html"
-    obj = get_object_or_404(Hinatazaka46, pk=pk)
+    obj = get_object_or_404(Hinatazaka46, id=id)
     ctx = {"object": obj}
     if request.POST:
         obj.delete()
