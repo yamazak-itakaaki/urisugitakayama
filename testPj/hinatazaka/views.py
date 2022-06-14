@@ -22,6 +22,9 @@ def hinatazakaProfileView(request,id):
 
 def hinatazakaCreateView(request):
     template_name="hinatazaka-form.html"
+    form = HinatazakaFormClass()
+    ctx = {}
+    ctx["form"] = form
     if request.POST:
         miyozi = request.POST["miyozi"]
         name = request.POST["name"]
@@ -31,7 +34,7 @@ def hinatazakaCreateView(request):
         obj.save()
         return redirect('hinatazaka-list')
     
-    return render(request, template_name)
+    return render(request, template_name, ctx)
 
 
 def hinatazakaDeleteView(request, id):
