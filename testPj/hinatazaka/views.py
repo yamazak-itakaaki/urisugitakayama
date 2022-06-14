@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from .models import Hinatazaka46
 from django.shortcuts import redirect
+from .forms import  HinatazakaFormClass
 from django.shortcuts import render, get_object_or_404
 
 # Create your views here.
@@ -41,12 +42,25 @@ def hinatazakaDeleteView(request, id):
         obj.delete()
     return render(request, template_name, ctx)
 
+    from .forms import  NippoFormClass
+
+def hinatazakaCreateView(request):
+    template_name="nippo/nippo-form.html"
+    form = HinatazakaFormClass()
+    ctx = {}
+    ctx["form"] = form
+    if form.is_valid():
+        title = form.cleaned_data["title"]
+        content = form.cleaned_data["content"]
+        obj = Hinatazaka46(title=title, content=content)
+        obj.save()
+    return render(request, template_name, ctx)
 
 def hinatazakaUpdateFormView(request, pk):
     template_name = "hinatazaka-form.html"
-    obj = hinatazaka46.objects.get(pk=pk)
+    obj = Hinatazaka46.objects.get(pk=pk)
     initial_values = {"title": obj.title, "content":obj.content}
-    form = hinatazaka-form(request.POST or initial_values)
+    form = HinatazakaFormClass(request.POST or initial_values)
     ctx = {"form": form}
     if form.is_valid():
         miyozi = form.cleaned_data["miyozi"]
