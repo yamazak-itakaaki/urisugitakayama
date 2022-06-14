@@ -1,10 +1,8 @@
 from django.shortcuts import render
 from .models import Hinatazaka46
-<<<<<<< HEAD
 from django.shortcuts import redirect
-=======
 from django.shortcuts import render, get_object_or_404
->>>>>>> 909033dea74de0cc635619942ec0e8c6892f122d
+
 # Create your views here.
 def hinatazakaListView(request):
     template_name = "hinatazaka-list.html"
