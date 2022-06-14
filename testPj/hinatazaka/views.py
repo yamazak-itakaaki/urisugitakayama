@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from .models import Hinatazaka46
+from django.shortcuts import render, get_object_or_404
 # Create your views here.
 def hinatazakaListView(request):
     template_name = "hinatazaka-list.html"
@@ -26,3 +27,16 @@ def nippoCreateView(request):
     
     return render(request, template_name)
 
+def nippoDeleteView(request, pk):
+    template_name = "hinatazaka-delete.html"
+    obj = get_object_or_404(Hinatazaka46, pk=pk)
+    ctx = {"object": obj}
+    return render(request, template_name, ctx)
+
+def nippoDeleteView(request, pk):
+    template_name = "hinatazaka-delete.html"
+    obj = get_object_or_404(Hinatazaka46, pk=pk)
+    ctx = {"object": obj}
+    if request.POST:
+        obj.delete()
+    return render(request, template_name, ctx)
