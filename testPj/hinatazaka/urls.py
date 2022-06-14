@@ -4,12 +4,13 @@ from .views import hinatazakaProfileView
 
 from .views import hinatazakaCreateView
 
-from .views import  hinatazakaDeleteView
+from .views import hinatazakaDeleteView
 
 urlpatterns = [
     path("",hinatazakaListView, name='hinatazaka-list'),
     path("profile/<int:id>/",hinatazakaProfileView,name="hinatazaka-profile"),
     path("form/",hinatazakaCreateView,name="hinatazaka-create"),
+    path("delete/<int:id>/", hinatazakaDeleteView, name="hinatazaka-delete"),
 ]
 
   
