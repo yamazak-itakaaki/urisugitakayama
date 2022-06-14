@@ -16,7 +16,7 @@ def hinatazakaProfileView(request,id):
 
     return render(request, template_name,ctx)
 
-def nippoCreateView(request):
+def hinatazakaCreateView(request):
     template_name="hinatazaka-form.html"
     if request.POST:
         miyozi = request.POST["miyozi"]
