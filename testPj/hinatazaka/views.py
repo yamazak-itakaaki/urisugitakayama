@@ -14,3 +14,13 @@ def hinatazakaProfileView(request,pk):
     q = Hinatazaka46.objects.get(pk=pk)
     ctx["object"] = q
     return render(request, template_name,ctx)
+
+def nippoCreateView(request):
+    template_name="hinatazaka-form.html"
+    if request.POST:
+        miyozi = request.POST["miyozi"]
+        name = request.POST["name"]
+        brithday = request.POST["brithday"]
+        city = request.POST["city"]
+    
+    return render(request, template_name)
