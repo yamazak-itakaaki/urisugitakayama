@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from .models import Hinatazaka46
+from django.shortcuts import redirect
 # Create your views here.
 def hinatazakaListView(request):
     template_name = "hinatazaka-list.html"
@@ -21,8 +22,11 @@ def hinatazakaCreateView(request):
     if request.POST:
         miyozi = request.POST["miyozi"]
         name = request.POST["name"]
-        brithday = request.POST["brithday"]
+        birthday = request.POST["birthday"]
         city = request.POST["city"]
+        obj = Hinatazaka46(miyozi=miyozi,name=name,birthday=birthday,city=city)
+        obj.save()
+        return redirect('hinatazaka-list')
     
     return render(request, template_name)
 
