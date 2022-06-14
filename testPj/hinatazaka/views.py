@@ -50,9 +50,11 @@ def hinatazakaCreateView(request):
     ctx = {}
     ctx["form"] = form
     if form.is_valid():
-        title = form.cleaned_data["title"]
-        content = form.cleaned_data["content"]
-        obj = Hinatazaka46(title=title, content=content)
+        miyozi = form.cleaned_data["miyozi"]
+        name = form.cleaned_data["name"]
+        brithday = form.cleaned_data["brithday"]
+        city = form.cleaned_data["city"]
+        obj = Hinatazaka46(miyozi=miyozi,name=name,birthday=birthday,city=city)
         obj.save()
     return render(request, template_name, ctx)
 
@@ -64,9 +66,9 @@ def hinatazakaUpdateFormView(request, pk):
     ctx = {"form": form}
     if form.is_valid():
         miyozi = form.cleaned_data["miyozi"]
-        name = form.cleaned_data["content"]
-        brithday = form.cleaned_data["content"]
-        city = form.cleaned_data["content"]
+        name = form.cleaned_data["name"]
+        brithday = form.cleaned_data["birthday"]
+        city = form.cleaned_data["city"]
         obj.miyozi = miyozi
         obj.name = name
         obj.brithday = brithday
