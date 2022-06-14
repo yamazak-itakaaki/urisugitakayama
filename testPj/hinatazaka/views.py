@@ -40,3 +40,22 @@ def nippoDeleteView(request, pk):
     if request.POST:
         obj.delete()
     return render(request, template_name, ctx)
+
+
+def hinatazakaUpdateFormView(request, pk):
+    template_name = "hinatazaka-form.html"
+    obj = hinatazaka46.objects.get(pk=pk)
+    initial_values = {"title": obj.title, "content":obj.content}
+    form = hinatazaka-form(request.POST or initial_values)
+    ctx = {"form": form}
+    if form.is_valid():
+        miyozi = form.cleaned_data["miyozi"]
+        name = form.cleaned_data["content"]
+        brithday = form.cleaned_data["content"]
+        city = form.cleaned_data["content"]
+        obj.miyozi = miyozi
+        obj.name = name
+        obj.brithday = brithday
+        obj.city = city
+        obj.save()
+    return render(request, template_name, ctx)    

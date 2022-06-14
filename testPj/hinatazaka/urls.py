@@ -6,4 +6,5 @@ urlpatterns = [
     path("",hinatazakaListView),
     path("profile/<int:id>/",hinatazakaProfileView,name="hinatazaka-profile"),
     path("delete/<int:pk>/", hinatazakaDeleteView, name="hinatazaka-delete"),
+    path("update/<int:pk>/", hinatazakaUpdateFormView, name="hinatazaka-update"),
 ]
