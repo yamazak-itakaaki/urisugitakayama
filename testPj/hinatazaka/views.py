@@ -8,11 +8,12 @@ def hinatazakaListView(request):
     ctx["object_list"] = qs
     return render(request,template_name, ctx)
 
-def hinatazakaProfileView(request,pk):
+def hinatazakaProfileView(request,id):
     template_name = "hinatazaka-profile.html"
     ctx = {}
-    q = Hinatazaka46.objects.get(pk=pk)
+    q = Hinatazaka46.objects.get(id=id)
     ctx["object"] = q
+
     return render(request, template_name,ctx)
 
 def nippoCreateView(request):
@@ -24,3 +25,4 @@ def nippoCreateView(request):
         city = request.POST["city"]
     
     return render(request, template_name)
+
