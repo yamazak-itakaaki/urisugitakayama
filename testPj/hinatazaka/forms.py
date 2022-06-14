@@ -1,5 +1,7 @@
 from django import forms
 
 class HinatazakaFormClass(forms.Form):
-    title = forms.CharField()
-    content = forms.CharField()
+    miyozi = forms.CharField()
+    name  = forms.CharField()
+    birthday= forms.CharField()
+    city= forms.CharField()
