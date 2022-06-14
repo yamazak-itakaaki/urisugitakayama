@@ -54,7 +54,7 @@ def hinatazakaCreateView(request):
         name = form.cleaned_data["name"]
         brithday = form.cleaned_data["brithday"]
         city = form.cleaned_data["city"]
-        obj = Hinatazaka46(miyozi=miyozi,name=name,birthday=birthday,city=city)
+        obj = Hinatazaka46(miyozi=miyozi,name=name,birthday=brithday,city=city)
         obj.save()
     return render(request, template_name, ctx)
 
