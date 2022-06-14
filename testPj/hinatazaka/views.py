@@ -7,3 +7,9 @@ def hinatazakaListView(request):
     qs = Hinatazaka46.objects.all()
     ctx["object_list"] = qs
     return render(request,template_name, ctx)
+
+    template_name = "hinatazaka-profile.html"
+    ctx = {}
+    q = Hinatazaka46.objects.get(pk=pk)
+    ctx["object"] = q
+    return render(request, template_name,ctx)

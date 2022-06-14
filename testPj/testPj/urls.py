@@ -21,4 +21,13 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('test/', test.test, name='test'),
     path('hinatazaka/', include('hinatazaka.urls'))
+    path('hinatazaka1/', include('hinatazaka.urls'))
+    path('hinatazaka2/', include('hinatazaka.urls'))
+    path('hinatazaka3/', include('hinatazaka.urls'))
+    path('hinatazaka4/', include('hinatazaka.urls'))
+    path('hinatazaka5/', include('hinatazaka.urls'))
+    path('hinatazaka6/', include('hinatazaka.urls'))
+    path('hinatazaka7/', include('hinatazaka.urls'))
+    path('hinatazaka8/', include('hinatazaka.urls'))
+    path('hinatazaka9/', include('hinatazaka.urls'))
 ]
