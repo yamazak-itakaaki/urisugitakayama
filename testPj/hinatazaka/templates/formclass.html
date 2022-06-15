@@ -1,11 +1,20 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=">
-        <title></title>
-    </head>
-    <body>
-    
-    </body>
-</html>
+{% extends "base.html" %}
+{% block title %}入力フォーム{% endblock %}
+
+{% block content %}
+    <form action='{% url "hinatazaka-list" %}' method="POST" class ="form">{% csrf_token %}
+        <div>
+            <input name="miyozi" type="text" placeholder="苗字..."/>
+        </div>
+        <div>
+            <input name="name" type="text" placeholder="名前..."/>
+        </div>
+        <div>
+            <input name="birthday" type="text" placeholder="誕生日..."/>
+        </div>
+        <div>
+            <input name="city" type="text" placeholder="出身地..."/>
+        </div>
+        <button type="submit">更新</button>
+    </form>
+{% endblock %}
