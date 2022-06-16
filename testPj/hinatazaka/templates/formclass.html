@@ -2,9 +2,9 @@
 {% block title %}入力フォーム{% endblock %}
 
 {% block content %}
-    <form action='{% url "hinatazaka-list" %}' method="POST" class ="form">{% csrf_token %}
+    <form method="POST">{% csrf_token %}
         <div>
-            <input name="miyozi" type="text" placeholder="苗字..."/>
+            <input name="miyozi" type="text" placeholder="名前..."/>
         </div>
         <div>
             <input name="name" type="text" placeholder="名前..."/>

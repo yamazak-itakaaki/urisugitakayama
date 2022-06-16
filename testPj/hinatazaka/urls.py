@@ -10,7 +10,7 @@ urlpatterns = [
     path("profile/<int:id>/",hinatazakaProfileView,name="hinatazaka-profile"),
     path("delete/<int:id>/", hinatazakaDeleteView, name="hinatazaka-delete"),
     path("form/",hinatazakaCreateView,name="hinatazaka-create"),
-    path('update/<int:id>/', hinatazakaUpdateFormView, name = "hinatazaka-update"),
+    path("update/<int:id>/", hinatazakaUpdateFormView, name = "hinatazaka-update"),
     path("delete/<int:id>/", hinatazakaDeleteView, name="hinatazaka-delete"),
     
 
