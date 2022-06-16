@@ -5,5 +5,6 @@
 {% block content %}
 <div>
     {{object.id}}{{object.miyozi}}{{object.name}}{{object.birthday}}{{object.city}}
+    <a href={% url 'hinatazaka-list' %}>戻る</a>
 </div>
 {% endblock %}

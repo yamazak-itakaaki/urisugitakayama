@@ -4,17 +4,18 @@
 {% block content %}
     <form method="POST">{% csrf_token %}
         <div>
-            <input name="miyozi" type="text" placeholder="名前..."/>
+            {{form.miyozi}}
         </div>
         <div>
-            <input name="name" type="text" placeholder="名前..."/>
+            {{form.name}}
         </div>
         <div>
-            <input name="birthday" type="text" placeholder="誕生日..."/>
+            {{form.birthday}}
         </div>
         <div>
-            <input name="city" type="text" placeholder="出身地..."/>
+            {{form.city}}
         </div>
         <button type="submit">更新</button>
+        <a href={% url 'hinatazaka-list' %}>戻る</a>
     </form>
 {% endblock %}
