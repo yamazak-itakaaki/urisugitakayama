@@ -1,3 +1,4 @@
+
 from django.db import models
 
 # Create your models here.
@@ -32,3 +33,4 @@ class Yoyaku(models.Model):
     class Meta:
         managed = False
         db_table = 'yoyaku'
+
