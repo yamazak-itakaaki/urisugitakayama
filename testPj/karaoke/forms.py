@@ -12,4 +12,4 @@ class EnqueteForm(forms.Form):
     def __init__(self,*args,**kwargs):
         super().__init__(*args,**kwargs)
 
-      self.fields['birth'].widget.attrs['class']='form-control col-11'
+      self.fields['day'].widget.attrs['class']='form-control col-11'
