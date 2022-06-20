@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block title %}ログイン{% endblock %}
+
+{% block content %}
+    <form method="POST">{% csrf_token %}
+        <div>
+            メールアドレス：<input name="Mail" type="email" placeholder="karaoke@example.com..."/>
+        </div>
+        <div>
+            パスワード：<input name="Password" type="password" placeholder="Password012..."/>
+        </div>
+        <button type="submit">ログイン</button>
+    </form>
+{% endblock %}
