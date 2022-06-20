@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block title %}部屋選択{% endblock %}
+
+{% block content %}
+    <form method="POST">{% csrf_token %}
+        <div>
+            <input name="miyozi" type="text" placeholder="苗字..."/>
+        </div>
+        <div>
+            <input name="name" type="text" placeholder="名前..."/>
+        </div>
+        <div>
+            <input name="birthday" type="text" placeholder="誕生日..."/>
+        </div>
+        <div>
+            <input name="city" type="text" placeholder="出身地..."/>
+        </div>
+        <button type="submit">送信</button>
+        <a href={% url 'hinatazaka-list' %}>戻る</a>
+    </form>
+{% endblock %}
