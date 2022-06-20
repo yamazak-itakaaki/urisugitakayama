@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block title %}会員情報確認{% endblock %}
+
+{% block content %}
+    <form method="POST">{% csrf_token %}
+        <div>
+            苗字：{{obj.Miyozi}}
+        </div>
+        <div>
+            名前：{{obj.Name}}
+        </div>
+        <div>
+            メールアドレス：{{obj.Mail}}
+        </div>
+        <div>
+            電話番号：{{obj.Address}}
+        </div>
+        <div>
+            パスワード：{{obj.Password}}
+        </div>
+        <button type="submit">登録</button>
+        <button type=“submit” onclick="location.href='{% url 'karaoke-newmember' %}'">変更</button>
+    </form>
+{% endblock %}
