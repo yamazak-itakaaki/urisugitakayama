@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block content %}
+<form action="" method="POST">
+    
+    <div>
+        <label for="pref">ご利用時間{{time}}:00~</label> <select name="" id="pref">
+            <option value="" selected>選択してください</option>
+            <option value="1">11:00</option>
+            <option value="2">12:00</option>
+            <option value="3">13:00</option>
+            <option value="4">14:00</option>
+            <option value="5">15:00</option>
+        </select>
+    </div>
+    <button type="submit">次へ</button>
+    <button type="submit">戻る</button>
+    <button type="submit">キャンセル</button>
+   
+</form>
+{% endblock %}

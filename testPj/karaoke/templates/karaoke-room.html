@@ -3,19 +3,78 @@
 
 {% block content %}
     <form method="POST">{% csrf_token %}
-        <div>
-            <input name="miyozi" type="text" placeholder="苗字..."/>
-        </div>
-        <div>
-            <input name="name" type="text" placeholder="名前..."/>
-        </div>
-        <div>
-            <input name="birthday" type="text" placeholder="誕生日..."/>
-        </div>
-        <div>
-            <input name="city" type="text" placeholder="出身地..."/>
-        </div>
-        <button type="submit">送信</button>
-        <a href={% url 'hinatazaka-list' %}>戻る</a>
-    </form>
+    <table border="1">
+        <tr>
+            <th>時間</th>
+            <td>1~4人部屋</td>
+            <td>1~8人部屋</td>
+            <td>1~15人部屋</td>
+        </tr>
+        <tr>
+            <th>10</th>
+            <td><button name="test" value="1">〇</button></td>
+            <td><button name="test" value="2">〇</button></td>
+            <td><button name="test" value="3">〇</button></td>
+        </tr><tr>
+            <th>11</th>
+            
+            <td><button name="test" value="4">〇</button></td>
+            <td><button name="test" value="5">〇</button></td>
+            <td><button name="test" value="6">〇</button></td>
+        </tr><tr>
+            <th>12</th>
+            
+            <td><button name="test" value="7">〇</button></td>
+            <td><button name="test" value="8">〇</button></td>
+            <td><button name="test" value="9">〇</button></td>
+        </tr><tr>
+            <th>13</th>
+            
+            <td><button name="test" value="10">〇</button></td>
+            <td><button name="test" value="11">〇</button></td>
+            <td><button name="test" value="12">〇</button></td>
+        </tr><tr>
+            <th>14</th>
+            
+            <td><button name="test" value="13">〇</button></td>
+            <td><button name="test" value="14">〇</button></td>
+            <td><button name="test" value="15">〇</button></td>
+        </tr><tr>
+            <th>15</th>
+            <td><button name="test" value="16">〇</button></td>
+            <td><button name="test" value="17">〇</button></td>
+            <td><button name="test" value="18">〇</button></td>
+        </tr><tr>
+            <th>16</th>
+            
+            <td><button name="test" value="19">〇</button></td>
+            <td><button name="test" value="20">〇</button></td>
+            <td><button name="test" value="21">〇</button></td>
+        </tr><tr>
+            <th>17</th>
+            
+            <td><button name="test" value="22">〇</button></td>
+            <td><button name="test" value="23">〇</button></td>
+            <td><button name="test" value="24">〇</button></td>
+        </tr><tr>
+            <th>18</th>
+            
+            <td><button name="test" value="25">〇</button></td>
+            <td><button name="test" value="26">〇</button></td>
+            <td><button name="test" value="27">〇</button></td>
+        </tr><tr>
+            <th>19</th>
+            
+            <td><button name="test" value="28">〇</button></td>
+            <td><button name="test" value="29">〇</button></td>
+            <td><button name="test" value="30">〇</button></td>
+        </tr>
+
+    </table>
+</form>
+        <body>
+        <button type="submit">戻る</button>
+        <button type="submit">キャンセル</button>
+       
+      </body>
 {% endblock %}

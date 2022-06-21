@@ -1,6 +1,10 @@
 from django.urls import path
-from .views import Login
+from . import views
+from .views import karaokehomeView, karaokeinputView, karaokeroomView, karaokenetimeView
 
 urlpatterns = [
-    path('login/', Login, name="karaoke-login"),#ログインページへのパス
+    path("",karaokehomeView, name='karaoke-home'),
+    path("input/", karaokeinputView, name='karaoke-input'),
+    path("room/", karaokeroomView, name='karaoke-room'),
+    path("time/<int:number>/",karaokenetimeView, name='karaoke-time'),
 ]
