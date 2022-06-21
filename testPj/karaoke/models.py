@@ -4,7 +4,6 @@ from django.contrib.auth.models import User
 
 # Create your models here.
 class Kaiintouroku(models.Model):
-    user = models.OneToOneField(User, on_delete=models.CASCADE)
     id = models.IntegerField(db_column='ID', primary_key=True)  # Field name made lowercase.
     miyozi = models.TextField(db_column='Miyozi', db_collation='C', blank=True, null=True)  # Field name made lowercase. This field type is a guess.
     name = models.TextField(db_column='Name', db_collation='C', blank=True, null=True)  # Field name made lowercase. This field type is a guess.
