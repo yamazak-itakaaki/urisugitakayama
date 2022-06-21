@@ -1,5 +1,6 @@
 from django.shortcuts import render
-
+from django.shortcuts import redirect
+from .forms import  KaraokeFormClass
 # Create your views here.
 from .models import Kaiintouroku
 from .models import Yoyaku
@@ -11,12 +12,15 @@ def karaokehomeView(request):
 
     return render(request,template_name,)
 
-def karaokeinputView(request,id):
+def karaokeinputView(request):
     template_name = "karaoke-input.html"
+    form = KaraokeFormClass()
     ctx = {}
-    q = Hinatazaka46.objects.get(id=id)
-    ctx["object"] = q
-
+    ctx["form"] = form
+    if request.POST:
+        request.session['Day'] = request.POST['Day']
+        request.session['people'] = request.POST['people']
+        return redirect('karaoke-room')
     return render(request, template_name,ctx) 
 
 def karaokeroomView(request):
