@@ -75,45 +75,18 @@ def karaokenewmembercheckView(request, id):
         if request.POST:
             return redirect('hinatazaka-list')
     return render(request, template_name, ctx) 
-def karaokeroomView(request, id):
+
+def karaokeroomView(request):
     template_name = "karaoke-room.html"
-    obj = get_object_or_404(Hinatazaka46, id=id)
-    initial_values = {"miyozi":obj.miyozi,"name":obj.name,"birthday":obj.birthday,"city":obj.city}
-    form = HinatazakaFormClass(request.POST or initial_values)
-    ctx = {"form": form}
-    ctx["obj"] = obj
-    if form.is_valid():
-        miyozi = form.cleaned_data["miyozi"]
-        name = form.cleaned_data["name"]
-        birthday = form.cleaned_data["birthday"]
-        city = form.cleaned_data["city"]
-        obj.miyozi = miyozi
-        obj.name = name
-        obj.birthday = birthday
-        obj.city = city
-        obj.save()
-        if request.POST:
-            return redirect('hinatazaka-list')
-    return render(request, template_name, ctx) 
-def karaokenetimeView(request, id):
+    if request.POST:
+        request.session['time'] = number
+        return redirect('hinatazaka-list')
+    return render(request, template_name, ctx)
+
+def karaokenetimeView(request, number):
     template_name = "karaoke-time.html"
-    obj = get_object_or_404(Hinatazaka46, id=id)
-    initial_values = {"miyozi":obj.miyozi,"name":obj.name,"birthday":obj.birthday,"city":obj.city}
-    form = HinatazakaFormClass(request.POST or initial_values)
-    ctx = {"form": form}
-    ctx["obj"] = obj
-    if form.is_valid():
-        miyozi = form.cleaned_data["miyozi"]
-        name = form.cleaned_data["name"]
-        birthday = form.cleaned_data["birthday"]
-        city = form.cleaned_data["city"]
-        obj.miyozi = miyozi
-        obj.name = name
-        obj.birthday = birthday
-        obj.city = city
-        obj.save()
-        if request.POST:
-            return redirect('hinatazaka-list')
+    request.session['time'] = number
+    ctx['time'] = request.session['time']
     return render(request, template_name, ctx) 
 
 
