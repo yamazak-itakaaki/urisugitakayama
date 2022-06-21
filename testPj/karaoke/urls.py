@@ -3,7 +3,9 @@ from . import views
 
 urlpatterns = [
     path('login/', views.AccountRegistration.as_view(), name="karaoke-login"),#ログインページへのパス
-    path("time/<int:number>/",)
+    path("time/<int:number>/",),
+    path("",karaokehomeView, name='karaoke-home'),
+    
 
 
 ]

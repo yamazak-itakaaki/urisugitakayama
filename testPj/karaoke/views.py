@@ -15,10 +15,8 @@ class EnqueteView(generic.FormView):
     success_url = reverse_lazy('information:enquete')
 def karaokehomeView(request):
     template_name = "karaoke-home.html"
-    ctx = {}
-    qs = Hinatazaka46.objects.all()
-    ctx["object_list"] = qs
-    return render(request,template_name, ctx)
+
+    return render(request,template_name,)
 
 def karaokeinputView(request,id):
     template_name = "karaoke-input.html"
