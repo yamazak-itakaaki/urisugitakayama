@@ -3,7 +3,6 @@
 <input type="date" name="Day">
 
 
-
 {% block content %}
 <form action="" method="POST">
     <div>
@@ -11,7 +10,7 @@
     </div>
     <div>
         <label for="pref">ご利用人数</label><br>
-        <select name="" id="pref">
+        <select name="Number of people" id="pref">
             <option value="" selected>選択してください</option>
             <option value="1">1人</option>
             <option value="2">2人</option>
@@ -31,7 +30,7 @@
         </select>
     </div>
     
-    <a href={% url '' %}>次へ</a>
-    <a href={% url '' %}>キャンセル</a>
+    <a href={% url 'karaoke-room' %}>次へ</a>
+    <a href={% url 'karaoke-home' %}>キャンセル</a>
 </form>
 {% endblock %}
