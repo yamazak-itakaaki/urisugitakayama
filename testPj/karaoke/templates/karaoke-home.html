@@ -7,7 +7,9 @@
 </head>
 <body bgcolor="#ffffe0" text="#000000">
     <h1>カラオケ</h1>
-    <div>
+
+    <ul class="list">
+      <li>
         <a href="karaoke-input.html">
             <table border="1" 
               bordercolor="#0812fd"
@@ -22,9 +24,9 @@
               </tr>
             </table>
         </a>
-    </div>
+      </li>
 
-    <div>
+     <li>
         <a href="karaoke-login.html">
             <table border="1" 
               bordercolor="#0812fd"
@@ -39,9 +41,9 @@
               </tr>
             </table>
         </a>
-    </div>
+      </li>
 
-    <div>
+      <li>
         <a href="karaoke-newmember.html">
             <table border="1" 
               bordercolor="#0812fd"
@@ -56,9 +58,11 @@
               </tr>
             </table>
         </a>
-    </div>
+      </li>
+    </ul>
+  </div>  
 
-    <table>
+    <table style="width: 400px; margin: auto;">
       <tr>
         <th>所在地</th>
         <td>
@@ -86,5 +90,12 @@
         </td>
       </tr>
     </table>
+
+    <style>
+     .list {position: relative;overflow: hidden;}
+     .list ul {position: relative;left: 50%;float: left;margin-left: -5px;}
+     .list ul li {position: relative;left: -50%;float: left;margin-left: 10px;}
+    </style>
+
 </body>
 </html>
