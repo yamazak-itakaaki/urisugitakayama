@@ -30,6 +30,7 @@ class Yoyaku(models.Model):
     id = models.IntegerField(db_column='ID', blank=True, null=True)  # Field name made lowercase.
     room_id = models.IntegerField(db_column='Room_id', blank=True, null=True)  # Field name made lowercase.
     time = models.IntegerField(db_column='Time', blank=True, null=True)  # Field name made lowercase.
+    people = models.IntegerField(db_column='People', blank=True, null=True)
 
     class Meta:
         managed = False
