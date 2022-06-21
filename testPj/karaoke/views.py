@@ -25,14 +25,19 @@ def karaokeinputView(request):
 
 def karaokeroomView(request):
     template_name = "karaoke-room.html"
+    form = KaraokeFormClass()
+    ctx = {}
+    ctx["form"] = form
     if request.POST:
-        request.session['time'] = number
-        return redirect('hinatazaka-list')
+        judge = request.POST['test']
+        if judge == '1':
+            request.session['room_id'] = '1' # 4人部屋
+            request.session['time'] = '10' # 時間
+            return redirect('karaoke-time', '1')
     return render(request, template_name, ctx)
 
 def karaokenetimeView(request, number):
     template_name = "karaoke-time.html"
-    request.session['time'] = number
     ctx = {}
     ctx['time'] = request.session['time']
     return render(request, template_name, ctx) 
