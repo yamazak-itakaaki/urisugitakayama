@@ -34,7 +34,7 @@ def karaokeroomView(request):
             request.session['room_id'] = '1' # 4人部屋
             request.session['time'] = '10' # 時間
             return redirect('karaoke-time', '1')
-            if else judge == '2':
+        elif judge == '2':
             request.session['room_id'] = '1' # 4人部屋
             request.session['time'] = '10' # 時間
             return redirect('karaoke-time', '1')

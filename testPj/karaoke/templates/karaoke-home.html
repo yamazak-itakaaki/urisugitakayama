@@ -1,11 +1,6 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-    <meta charset="UTF-8">
-   
-    <title>カラオケ</title>
-</head>
-<body bgcolor="#ffffe0" text="#000000">
+{% extends "base.html" %}
+{% block title %}カラオケ{% endblock %}
+{% block content %}
     <h1>カラオケ</h1>
 
     <ul class="list">
@@ -97,6 +92,4 @@
      .list ul {position: relative;left: 50%;float: left;margin-left: -5px;}
      .list ul li {position: relative;left: -50%;float: left;margin-left: 10px;}
     </style>
-
-</body>
-</html>
+{% endblock %}
