@@ -1,14 +1,12 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-    <meta charset="UTF-8">
-   
-    <title>カラオケ</title>
-</head>
-<body bgcolor="#ffffe0" text="#000000">
+{% extends "base.html" %}
+{% block title %}カラオケ{% endblock %}
+{% block content %}
     <h1>カラオケ</h1>
+
+    <ul class="list">
+      <li>
     <div>
-        <a href="karaoke-input.html">
+        <a href={% url 'karaoke-input' %}>
             <table border="1" 
               bordercolor="#0812fd"
               cellspacing="0" 
@@ -22,9 +20,9 @@
               </tr>
             </table>
         </a>
-    </div>
+      </li>
 
-    <div>
+     <li>
         <a href="karaoke-login.html">
             <table border="1" 
               bordercolor="#0812fd"
@@ -39,9 +37,9 @@
               </tr>
             </table>
         </a>
-    </div>
+      </li>
 
-    <div>
+      <li>
         <a href="karaoke-newmember.html">
             <table border="1" 
               bordercolor="#0812fd"
@@ -56,9 +54,11 @@
               </tr>
             </table>
         </a>
-    </div>
+      </li>
+    </ul>
+  </div>  
 
-    <table>
+    <table style="width: 400px; margin: auto;">
       <tr>
         <th>所在地</th>
         <td>
@@ -86,5 +86,10 @@
         </td>
       </tr>
     </table>
-</body>
-</html>
+
+    <style>
+     .list {position: relative;overflow: hidden;}
+     .list ul {position: relative;left: 50%;float: left;margin-left: -5px;}
+     .list ul li {position: relative;left: -50%;float: left;margin-left: 10px;}
+    </style>
+{% endblock %}

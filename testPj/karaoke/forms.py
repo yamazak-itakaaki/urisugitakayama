@@ -1,4 +1,5 @@
 
+
 # ログイン
 from django.contrib.auth.models import User
 from .models import Kaiintouroku
@@ -22,3 +23,11 @@ class AddAccountForm(forms.ModelForm):
         model = Kaiintouroku
         fields = ('miyoji','name','address',)
         labels = {'miyoji':"苗字",'name':"名前",'address':"電話番号",}
+from django import forms
+#(中略)
+
+class KaraokeFormClass(forms.Form):
+    Day = forms.CharField()
+    people  = forms.CharField()
+    test = forms.CharField()
+

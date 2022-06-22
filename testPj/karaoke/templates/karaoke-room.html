@@ -2,7 +2,7 @@
 {% block title %}部屋選択{% endblock %}
 
 {% block content %}
-    
+    <form method="POST">{% csrf_token %}
     <table border="1">
         <tr>
             <th>時間</th>
@@ -12,57 +12,66 @@
         </tr>
         <tr>
             <th>10</th>
-            <td><a href={% url 'karaoke-time' 10 %}>テスト</a></td>
-            <td></td>
-            <td></td>
+            <td><button name="test" value="1">〇</button></td>
+            <td><button name="test" value="2">〇</button></td>
+            <td><button name="test" value="3">〇</button></td>
         </tr><tr>
             <th>11</th>
-            <td></td>
-            <td></td>
-            <td></td>
+            
+            <td><button name="test" value="4">〇</button></td>
+            <td><button name="test" value="5">〇</button></td>
+            <td><button name="test" value="6">〇</button></td>
         </tr><tr>
             <th>12</th>
-            <td></td>
-            <td></td>
-            <td></td>
+            
+            <td><button name="test" value="7">〇</button></td>
+            <td><button name="test" value="8">〇</button></td>
+            <td><button name="test" value="9">〇</button></td>
         </tr><tr>
             <th>13</th>
-            <td></td>
-            <td></td>
-            <td></td>
+            
+            <td><button name="test" value="10">〇</button></td>
+            <td><button name="test" value="11">〇</button></td>
+            <td><button name="test" value="12">〇</button></td>
         </tr><tr>
             <th>14</th>
-            <td></td>
-            <td></td>
-            <td></td>
+            
+            <td><button name="test" value="13">〇</button></td>
+            <td><button name="test" value="14">〇</button></td>
+            <td><button name="test" value="15">〇</button></td>
         </tr><tr>
             <th>15</th>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td><button name="test" value="16">〇</button></td>
+            <td><button name="test" value="17">〇</button></td>
+            <td><button name="test" value="18">〇</button></td>
         </tr><tr>
             <th>16</th>
-            <td></td>
-            <td></td>
-            <td></td>
+            
+            <td><button name="test" value="19">〇</button></td>
+            <td><button name="test" value="20">〇</button></td>
+            <td><button name="test" value="21">〇</button></td>
         </tr><tr>
             <th>17</th>
-            <td></td>
-            <td></td>
-            <td></td>
+            
+            <td><button name="test" value="22">〇</button></td>
+            <td><button name="test" value="23">〇</button></td>
+            <td><button name="test" value="24">〇</button></td>
         </tr><tr>
             <th>18</th>
-            <td></td>
-            <td></td>
-            <td></td>
+            
+            <td><button name="test" value="25">〇</button></td>
+            <td><button name="test" value="26">〇</button></td>
+            <td><button name="test" value="27">〇</button></td>
         </tr><tr>
             <th>19</th>
-            <td></td>
-            <td></td>
-            <td></td>
+            
+            <td><button name="test" value="28">〇</button></td>
+            <td><button name="test" value="29">〇</button></td>
+            <td><button name="test" value="30">〇</button></td>
         </tr>
 
     </table>
+</form>
         <body>
         <button type="submit">戻る</button>
         <button type="submit">キャンセル</button>

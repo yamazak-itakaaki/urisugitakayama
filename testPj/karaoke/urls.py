@@ -1,11 +1,10 @@
 from django.urls import path
 from . import views
+from .views import karaokehomeView, karaokeinputView, karaokeroomView, karaokenetimeView
 
 urlpatterns = [
-    path('login/', views.AccountRegistration.as_view(), name="karaoke-login"),#ログインページへのパス
-    path("time/<int:number>/",),
     path("",karaokehomeView, name='karaoke-home'),
-    
-
-
+    path("input/", karaokeinputView, name='karaoke-input'),
+    path("room/", karaokeroomView, name='karaoke-room'),
+    path("time/<int:number>/",karaokenetimeView, name='karaoke-time'),
 ]
