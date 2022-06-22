@@ -2,20 +2,70 @@
 {% block title %}部屋選択{% endblock %}
 
 {% block content %}
-    <form method="POST">{% csrf_token %}
-        <div>
-            <input name="miyozi" type="text" placeholder="苗字..."/>
-        </div>
-        <div>
-            <input name="name" type="text" placeholder="名前..."/>
-        </div>
-        <div>
-            <input name="birthday" type="text" placeholder="誕生日..."/>
-        </div>
-        <div>
-            <input name="city" type="text" placeholder="出身地..."/>
-        </div>
-        <button type="submit">送信</button>
-        <a href={% url 'hinatazaka-list' %}>戻る</a>
-    </form>
+    
+    <table border="1">
+        <tr>
+            <th>時間</th>
+            <td>1~4人部屋</td>
+            <td>1~8人部屋</td>
+            <td>1~15人部屋</td>
+        </tr>
+        <tr>
+            <th>10</th>
+            <td><a href={% url 'karaoke-time' 10 %}>テスト</a></td>
+            <td></td>
+            <td></td>
+        </tr><tr>
+            <th>11</th>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr><tr>
+            <th>12</th>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr><tr>
+            <th>13</th>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr><tr>
+            <th>14</th>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr><tr>
+            <th>15</th>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr><tr>
+            <th>16</th>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr><tr>
+            <th>17</th>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr><tr>
+            <th>18</th>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr><tr>
+            <th>19</th>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+
+    </table>
+        <body>
+        <button type="submit">戻る</button>
+        <button type="submit">キャンセル</button>
+       
+      </body>
 {% endblock %}

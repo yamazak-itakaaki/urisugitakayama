@@ -1,6 +1,11 @@
 from django.urls import path
-from .views import Login
+from . import views
 
 urlpatterns = [
-    path('login/', Login, name="karaoke-login"),#ログインページへのパス
+    path('login/', views.AccountRegistration.as_view(), name="karaoke-login"),#ログインページへのパス
+    path("time/<int:number>/",),
+    path("",karaokehomeView, name='karaoke-home'),
+    
+
+
 ]
